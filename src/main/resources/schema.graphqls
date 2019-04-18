@@ -1,0 +1,38 @@
+type Query {
+    getAllCivilizations: [Civilization]
+    getCivilizationById(Id: Int):Civilization
+}
+
+type Civilization {
+    Id: Int
+    Name: String
+    Description: String
+    Places: [Place]
+    Figures: [Figure]
+}
+
+type Place {
+    Id: Int
+    Name: String
+    Description: String
+    Latitude: Float
+    Longitude: Float
+    Tag: String
+}
+
+type Figure {
+    Id: Int
+    Name: String
+    Description: String
+    Places: [Place]
+    Area: Float
+    Author: String
+    CreationDate: String
+}
+
+schema {
+    query: Query
+}
+
+
+
