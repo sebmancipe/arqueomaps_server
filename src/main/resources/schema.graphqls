@@ -1,14 +1,13 @@
 type Query {
     getAllCivilizations: [Civilization]
-    getCivilizationById(Id: Int):Civilization
+    #getCivilizationById(Id: Int):Civilization
 }
 
 type Civilization {
     Id: Int
     Name: String
     Description: String
-    Places: [Place]
-    Figures: [Figure]
+    #Places: [Place]
 }
 
 type Place {
