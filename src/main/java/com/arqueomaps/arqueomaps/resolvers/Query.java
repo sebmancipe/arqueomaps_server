@@ -10,10 +10,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping
 public class Query implements GraphQLQueryResolver {
 
-    private CivilizationRepository CivilizationRepository;
+
+    private CivilizationRepository civilizationRepository;
+
+    public Query(CivilizationRepository civilizationRepository){
+        this.civilizationRepository = civilizationRepository;
+    }
 
     public Iterable<Civilization> getAllCivilizations(){
-        return CivilizationRepository.findAll();
+        return civilizationRepository.findAll();
     }
 
     /*public Civilization getCivilizationById(int Id){
