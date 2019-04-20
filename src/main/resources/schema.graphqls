@@ -1,13 +1,32 @@
 type Query {
     getAllCivilizations: [Civilization]
-    #getCivilizationById(Id: Int):Civilization
+    getCivilizationById(Id: Int):Civilization
+
+    getAllPlaces: [Place]
+    getPlaceById(Id:Int):Place
+
+    getAllFigures: [Figure]
+    getFigureById(Id: Int):Figure
+
+    getAllPlacesFromCivilization(Id: Int): [Place]
 }
 
+type Mutation {
+    newCivilization(Name: String!, Description: String!): Civilization!
+    deleteCivilization(Id: Int!): Boolean
+
+    newPlace(Name:String!,Description:String!,Latitude:Float!,Longitude:Float!,Tag:String!,Civilization: Int!,Figure:Int): Place!
+    deletePlace(Id: Int!): Boolean
+    #Can't change the Tag, Civilization or Figure of the place
+    updatePlaceById(Id: Int!, Name:String!, Description:String!, Latitude:Float!, Longitude:Float!):Place!
+
+    newFigure(Name:String!,Description:String!,Area:Float,Author:String!,CreationDate:String!):Figure
+    deleteFigure(Id: Int!): Boolean
+}
 type Civilization {
     Id: Int
-    Name: String
-    Description: String
-    #Places: [Place]
+    Name: String!
+    Description: String!
 }
 
 type Place {
@@ -17,13 +36,14 @@ type Place {
     Latitude: Float
     Longitude: Float
     Tag: String
+    Civilization: Civilization
+    Figure: Figure
 }
 
 type Figure {
     Id: Int
     Name: String
     Description: String
-    Places: [Place]
     Area: Float
     Author: String
     CreationDate: String
@@ -31,6 +51,7 @@ type Figure {
 
 schema {
     query: Query
+    mutation: Mutation
 }
 
 

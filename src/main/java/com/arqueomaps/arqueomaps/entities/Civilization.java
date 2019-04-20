@@ -16,5 +16,4 @@ public class Civilization {
 
     private String Description;
 
-    //private List<Place> Places;
 }

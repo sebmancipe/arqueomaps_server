@@ -2,15 +2,17 @@ package com.arqueomaps.arqueomaps.entities;
 
 import lombok.Data;
 
-import java.util.List;
+import javax.persistence.*;
 
 @Data
+@Entity
 public class Figure {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
     private String Name;
     private String Description;
-    private List<Place> Places;
-    private float Area;
+    private Float Area;
     private String Author;
     private String CreationDate;
 }
