@@ -1,7 +1,7 @@
-package com.arqueomaps.arqueomaps.repositories;
+package com.arqueomaps.serverarqueo.repositories;
 
-import com.arqueomaps.arqueomaps.entities.Civilization;
-import com.arqueomaps.arqueomaps.entities.Place;
+import com.arqueomaps.serverarqueo.entities.Civilization;
+import com.arqueomaps.serverarqueo.entities.Place;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

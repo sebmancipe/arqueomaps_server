@@ -10,7 +10,7 @@
 	</parent>
 
 	<groupId>com.arqueomaps</groupId>
-	<artifactId>arqueomaps</artifactId>
+	<artifactId>serverarqueo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>arqueomaps</name>
 	<description>Maps with a civilization-studying approach</description>

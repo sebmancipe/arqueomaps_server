@@ -1,10 +1,10 @@
-package com.arqueomaps.arqueomaps.resolvers;
+package com.arqueomaps.serverarqueo.resolvers;
 
-import com.arqueomaps.arqueomaps.entities.Civilization;
-import com.arqueomaps.arqueomaps.entities.Figure;
-import com.arqueomaps.arqueomaps.entities.Place;
-import com.arqueomaps.arqueomaps.repositories.CivilizationRepository;
-import com.arqueomaps.arqueomaps.repositories.FigureRepository;
+import com.arqueomaps.serverarqueo.entities.Civilization;
+import com.arqueomaps.serverarqueo.entities.Figure;
+import com.arqueomaps.serverarqueo.entities.Place;
+import com.arqueomaps.serverarqueo.repositories.CivilizationRepository;
+import com.arqueomaps.serverarqueo.repositories.FigureRepository;
 import com.coxautodev.graphql.tools.GraphQLResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

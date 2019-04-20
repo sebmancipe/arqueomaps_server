@@ -1,6 +1,6 @@
-package com.arqueomaps.arqueomaps.repositories;
+package com.arqueomaps.serverarqueo.repositories;
 
-import com.arqueomaps.arqueomaps.entities.Place;
+import com.arqueomaps.serverarqueo.entities.Place;
 import org.springframework.data.repository.CrudRepository;
 
 public interface PlaceRepository extends CrudRepository<Place,Integer> {}

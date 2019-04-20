@@ -1,4 +1,4 @@
-package com.arqueomaps.arqueomaps;
+package com.arqueomaps.serverarqueo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.arqueomaps.arqueomaps.entities;
+package com.arqueomaps.serverarqueo.entities;
 
 import lombok.Data;
 import javax.persistence.*;
