@@ -29,6 +29,18 @@ public class Mutation implements GraphQLMutationResolver {
         return civilization;
     }
 
+
+    //TODO: How to add an array of Places?
+    public int newPlacesOfCiv(Place[] Places, int id_civilization){
+        Civilization civilization = civilizationRepository.findById(id_civilization).orElse(null);
+        for (int i = 0; i < Places.length; i++) {
+            Place placeTemp = Places[i];
+            placeTemp.setCivilization(civilization);
+            placeRepository.save(placeTemp);
+        }
+        return id_civilization;
+    }
+
     public boolean deleteCivilization(int Id){
         civilizationRepository.deleteById(Id);
         return true;

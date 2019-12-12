@@ -11,9 +11,22 @@ type Query {
     getAllPlacesFromCivilization(Id: Int): [Place]
 }
 
+input PlaceInput{
+    Id: Int
+    Name: String
+    Description: String
+    Latitude: Float
+    Longitude: Float
+    Tag: String
+    Civilization: Civilization
+}
+
 type Mutation {
     newCivilization(Name: String!, Description: String!): Civilization!
     deleteCivilization(Id: Int!): Boolean
+
+
+    #newPlacesOfCiv(Places:[PlaceInput],Civilization:Int!): Int!
 
     newPlace(Name:String!,Description:String!,Latitude:Float!,Longitude:Float!,Tag:String!,Civilization: Int!,Figure:Int): Place!
     deletePlace(Id: Int!): Boolean
@@ -28,6 +41,7 @@ type Civilization {
     Name: String!
     Description: String!
 }
+
 
 type Place {
     Id: Int
